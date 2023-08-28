@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>crytp balance</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container-wrap lg:px-10 px-2">
+      <div class="top lg:flex items-center lg:py-10 py-5 border-b-2">
+        <div class="total-bal lg:w-1/2">
+          <h2>Estimated balance</h2>
+          <p class="lg:mt-5">
+            0.03223422 <span>USDT</span> = <span>$860.08</span>
+          </p>
+        </div>
+
+        <div
+          class="lg:w-1/2 flex items-center justify-between lg:mt-0 mt-5 lg:text-base text-sm"
+        >
+          <div class="spot-bal">
+            <h3>Sport balance</h3>
+            <p>
+              0.03223422 <span>USDT</span> <br />
+              = <span>$860.08</span>
+            </p>
+          </div>
+
+          <div class="fiat-bal">
+            <h3>Fiat balance</h3>
+            <p>
+              0.0000000 <span>USDT</span> <br />
+              = <span>$000.08</span>
+            </p>
+          </div>
+
+          <div class="pnl-bal">
+            <h3>Today's PNL</h3>
+            <p>+$3.73</p>
+            <p>+0.43</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="down my-5">
+        <div class="lg:flex items-center gap-5">
+          <div class="search flex items-center border-2 bg-red-500">
+            <img src="" alt="search-icon" class="searchh-icon" />
+            <input
+              type="text"
+              placeholder="Search Coin"
+              class="W-[80%] bg-transparent border-0"
+            />
+          </div>
+
+          <div>
+            <input type="checkbox" />
+            <span class="border-b-2 border-dashed">Hide small balance</span>
+          </div>
+
+          <div class="border-yellow-500 border-b-2 text-yellow-500">
+            <a href="">Convert small balance to BNB</a>
+          </div>
+          <div class="border-yellow-500 border-b-2 text-yellow-500">
+            <a href="">Auto-Invest</a>
+          </div>
+        </div>
+
+        <div class="coin-table mt-5 h-[70vh] overflow-scroll">
+          <table class="w-full relative">
+            <tr class="bg-red-100 sticky top-0">
+              <th class="text-left p-[10px]">Coin</th>
+              <th class="text-left p-[10px]">Total</th>
+              <th class="text-left p-[10px]">Avaliable</th>
+              <th class="text-left p-[10px]">In Order</th>
+              <th class="text-left p-[10px]">BTC Value</th>
+              <th class="text-left p-[10px] w-[30%] bg-green-100">action</th>
+            </tr>
+
+            <tr class="border-b-2">
+              <td class="text-left px-[10px]">
+                <div class="flex items-center">
+                  <div class="coin-img-wrap w-[35px] h-[35px] rounded-full">
+                    <img
+                      src="./background_image.jpg"
+                      alt=""
+                      width="100%"
+                      class="rounded-full"
+                    />
+                  </div>
+
+                  <div class="coin-text ml-5">
+                    <p class="coin-short-name text-sm">ADA</p>
+                    <p class="text-xs">
+                      <a href="" class="coin-full-name">Cardano</a>
+                    </p>
+                  </div>
+                </div>
+              </td>
+
+              <td class="text-left px-[10px] py-[5px]">906,86543</td>
+              <td class="text-left px-[10px] py-[5px]">906,86543</td>
+              <td class="text-left px-[10px] py-[5px]">906,86543</td>
+              <td class="text-left px-[10px] py-[5px]">
+                <p>906,86543</p>
+                <p>= $320</p>
+              </td>
+              <td class="text-left px-[10px] py-[5px]">
+                <span class="text-yellow-500">Buy</span>
+                <span class="ml-2 text-yellow-500">Sell</span>
+                <span class="ml-2 text-yellow-500">Deposite</span>
+                <span class="ml-2 text-yellow-500">Withdraw</span>
+                <span class="ml-2 text-yellow-500">Trade</span>
+                <span class="ml-2 text-yellow-500">Earn</span>
+              </td>
+            </tr>
+
+            <tr class="border-b-2">
+              <td class="text-left px-[10px]">
+                <div class="flex items-center">
+                  <div class="coin-img-wrap w-[35px] h-[35px] rounded-full">
+                    <img
+                      src="./background_image.jpg"
+                      alt=""
+                      width="100%"
+                      class="rounded-full"
+                    />
+                  </div>
+
+                  <div class="coin-text ml-5">
+                    <p class="coin-short-name text-sm">ADA</p>
+                    <p class="text-xs">
+                      <a href="" class="coin-full-name">Cardano</a>
+                    </p>
+                  </div>
+                </div>
+              </td>
+
+              <td class="text-left px-[10px] py-[5px]">906,86543</td>
+              <td class="text-left px-[10px] py-[5px]">906,86543</td>
+              <td class="text-left px-[10px] py-[5px]">906,86543</td>
+              <td class="text-left px-[10px] py-[5px]">
+                <p>906,86543</p>
+                <p>= $320</p>
+              </td>
+              <td class="text-left px-[10px] py-[5px]">
+                <span class="text-yellow-500">Buy</span>
+                <span class="ml-2 text-yellow-500">Sell</span>
+                <span class="ml-2 text-yellow-500">Deposite</span>
+                <span class="ml-2 text-yellow-500">Withdraw</span>
+                <span class="ml-2 text-yellow-500">Trade</span>
+                <span class="ml-2 text-yellow-500">Earn</span>
+              </td>
+            </tr>
+
+            <tr class="border-b-2">
+              <td class="text-left px-[10px]">
+                <div class="flex items-center">
+                  <div class="coin-img-wrap w-[35px] h-[35px] rounded-full">
+                    <img
+                      src="./background_image.jpg"
+                      alt=""
+                      width="100%"
+                      class="rounded-full"
+                    />
+                  </div>
+
+                  <div class="coin-text ml-5">
+                    <p class="coin-short-name text-sm">ADA</p>
+                    <p class="text-xs">
+                      <a href="" class="coin-full-name">Cardano</a>
+                    </p>
+                  </div>
+                </div>
+              </td>
+
+              <td class="text-left px-[10px] py-[5px]">906,86543</td>
+              <td class="text-left px-[10px] py-[5px]">906,86543</td>
+              <td class="text-left px-[10px] py-[5px]">906,86543</td>
+              <td class="text-left px-[10px] py-[5px]">
+                <p>906,86543</p>
+                <p>= $320</p>
+              </td>
+              <td class="text-left px-[10px] py-[5px]">
+                <span class="text-yellow-500">Buy</span>
+                <span class="ml-2 text-yellow-500">Sell</span>
+                <span class="ml-2 text-yellow-500">Deposite</span>
+                <span class="ml-2 text-yellow-500">Withdraw</span>
+                <span class="ml-2 text-yellow-500">Trade</span>
+                <span class="ml-2 text-yellow-500">Earn</span>
+              </td>
+            </tr>
+
+            <tr class="border-b-2">
+              <td class="text-left px-[10px]">
+                <div class="flex items-center">
+                  <div class="coin-img-wrap w-[35px] h-[35px] rounded-full">
+                    <img
+                      src="./background_image.jpg"
+                      alt=""
+                      width="100%"
+                      class="rounded-full"
+                    />
+                  </div>
+
+                  <div class="coin-text ml-5">
+                    <p class="coin-short-name text-sm">ADA</p>
+                    <p class="text-xs">
+                      <a href="" class="coin-full-name">Cardano</a>
+                    </p>
+                  </div>
+                </div>
+              </td>
+
+              <td class="text-left px-[10px] py-[5px]">906,86543</td>
+              <td class="text-left px-[10px] py-[5px]">906,86543</td>
+              <td class="text-left px-[10px] py-[5px]">906,86543</td>
+              <td class="text-left px-[10px] py-[5px]">
+                <p>906,86543</p>
+                <p>= $320</p>
+              </td>
+              <td class="text-left px-[10px] py-[5px]">
+                <span class="text-yellow-500">Buy</span>
+                <span class="ml-2 text-yellow-500">Sell</span>
+                <span class="ml-2 text-yellow-500">Deposite</span>
+                <span class="ml-2 text-yellow-500">Withdraw</span>
+                <span class="ml-2 text-yellow-500">Trade</span>
+                <span class="ml-2 text-yellow-500">Earn</span>
+              </td>
+            </tr>
+
+            <tr class="border-b-2">
+              <td class="text-left px-[10px]">
+                <div class="flex items-center">
+                  <div class="coin-img-wrap w-[35px] h-[35px] rounded-full">
+                    <img
+                      src="./background_image.jpg"
+                      alt=""
+                      width="100%"
+                      class="rounded-full"
+                    />
+                  </div>
+
+                  <div class="coin-text ml-5">
+                    <p class="coin-short-name text-sm">ADA</p>
+                    <p class="text-xs">
+                      <a href="" class="coin-full-name">Cardano</a>
+                    </p>
+                  </div>
+                </div>
+              </td>
+
+              <td class="text-left px-[10px] py-[5px]">906,86543</td>
+              <td class="text-left px-[10px] py-[5px]">906,86543</td>
+              <td class="text-left px-[10px] py-[5px]">906,86543</td>
+              <td class="text-left px-[10px] py-[5px]">
+                <p>906,86543</p>
+                <p>= $320</p>
+              </td>
+              <td class="text-left px-[10px] py-[5px]">
+                <span class="text-yellow-500">Buy</span>
+                <span class="ml-2 text-yellow-500">Sell</span>
+                <span class="ml-2 text-yellow-500">Deposite</span>
+                <span class="ml-2 text-yellow-500">Withdraw</span>
+                <span class="ml-2 text-yellow-500">Trade</span>
+                <span class="ml-2 text-yellow-500">Earn</span>
+              </td>
+            </tr>
+
+            <tr class="border-b-2">
+              <td class="text-left px-[10px]">
+                <div class="flex items-center">
+                  <div class="coin-img-wrap w-[35px] h-[35px] rounded-full">
+                    <img
+                      src="./background_image.jpg"
+                      alt=""
+                      width="100%"
+                      class="rounded-full"
+                    />
+                  </div>
+
+                  <div class="coin-text ml-5">
+                    <p class="coin-short-name text-sm">ADA</p>
+                    <p class="text-xs">
+                      <a href="" class="coin-full-name">Cardano</a>
+                    </p>
+                  </div>
+                </div>
+              </td>
+
+              <td class="text-left px-[10px] py-[5px]">906,86543</td>
+              <td class="text-left px-[10px] py-[5px]">906,86543</td>
+              <td class="text-left px-[10px] py-[5px]">906,86543</td>
+              <td class="text-left px-[10px] py-[5px]">
+                <p>906,86543</p>
+                <p>= $320</p>
+              </td>
+              <td class="text-left px-[10px] py-[5px]">
+                <span class="text-yellow-500">Buy</span>
+                <span class="ml-2 text-yellow-500">Sell</span>
+                <span class="ml-2 text-yellow-500">Deposite</span>
+                <span class="ml-2 text-yellow-500">Withdraw</span>
+                <span class="ml-2 text-yellow-500">Trade</span>
+                <span class="ml-2 text-yellow-500">Earn</span>
+              </td>
+            </tr>
+
+            <tr class="border-b-2">
+              <td class="text-left px-[10px]">
+                <div class="flex items-center">
+                  <div class="coin-img-wrap w-[35px] h-[35px] rounded-full">
+                    <img
+                      src="./background_image.jpg"
+                      alt=""
+                      width="100%"
+                      class="rounded-full"
+                    />
+                  </div>
+
+                  <div class="coin-text ml-5">
+                    <p class="coin-short-name text-sm">ADA</p>
+                    <p class="text-xs">
+                      <a href="" class="coin-full-name">Cardano</a>
+                    </p>
+                  </div>
+                </div>
+              </td>
+
+              <td class="text-left px-[10px] py-[5px]">906,86543</td>
+              <td class="text-left px-[10px] py-[5px]">906,86543</td>
+              <td class="text-left px-[10px] py-[5px]">906,86543</td>
+              <td class="text-left px-[10px] py-[5px]">
+                <p>906,86543</p>
+                <p>= $320</p>
+              </td>
+              <td class="text-left px-[10px] py-[5px]">
+                <span class="text-yellow-500">Buy</span>
+                <span class="ml-2 text-yellow-500">Sell</span>
+                <span class="ml-2 text-yellow-500">Deposite</span>
+                <span class="ml-2 text-yellow-500">Withdraw</span>
+                <span class="ml-2 text-yellow-500">Trade</span>
+                <span class="ml-2 text-yellow-500">Earn</span>
+              </td>
+            </tr>
+
+            <tr class="border-b-2">
+              <td class="text-left px-[10px]">
+                <div class="flex items-center">
+                  <div class="coin-img-wrap w-[35px] h-[35px] rounded-full">
+                    <img
+                      src="./background_image.jpg"
+                      alt=""
+                      width="100%"
+                      class="rounded-full"
+                    />
+                  </div>
+
+                  <div class="coin-text ml-5">
+                    <p class="coin-short-name text-sm">ADA</p>
+                    <p class="text-xs">
+                      <a href="" class="coin-full-name">Cardano</a>
+                    </p>
+                  </div>
+                </div>
+              </td>
+
+              <td class="text-left px-[10px] py-[5px]">906,86543</td>
+              <td class="text-left px-[10px] py-[5px]">906,86543</td>
+              <td class="text-left px-[10px] py-[5px]">906,86543</td>
+              <td class="text-left px-[10px] py-[5px]">
+                <p>906,86543</p>
+                <p>= $320</p>
+              </td>
+              <td class="text-left px-[10px] py-[5px]">
+                <span class="text-yellow-500">Buy</span>
+                <span class="ml-2 text-yellow-500">Sell</span>
+                <span class="ml-2 text-yellow-500">Deposite</span>
+                <span class="ml-2 text-yellow-500">Withdraw</span>
+                <span class="ml-2 text-yellow-500">Trade</span>
+                <span class="ml-2 text-yellow-500">Earn</span>
+              </td>
+            </tr>
+
+            <tr class="border-b-2">
+              <td class="text-left px-[10px]">
+                <div class="flex items-center">
+                  <div class="coin-img-wrap w-[35px] h-[35px] rounded-full">
+                    <img
+                      src="./background_image.jpg"
+                      alt=""
+                      width="100%"
+                      class="rounded-full"
+                    />
+                  </div>
+
+                  <div class="coin-text ml-5">
+                    <p class="coin-short-name text-sm">ADA</p>
+                    <p class="text-xs">
+                      <a href="" class="coin-full-name">Cardano</a>
+                    </p>
+                  </div>
+                </div>
+              </td>
+
+              <td class="text-left px-[10px] py-[5px]">906,86543</td>
+              <td class="text-left px-[10px] py-[5px]">906,86543</td>
+              <td class="text-left px-[10px] py-[5px]">906,86543</td>
+              <td class="text-left px-[10px] py-[5px]">
+                <p>906,86543</p>
+                <p>= $320</p>
+              </td>
+              <td class="text-left px-[10px] py-[5px]">
+                <span class="text-yellow-500">Buy</span>
+                <span class="ml-2 text-yellow-500">Sell</span>
+                <span class="ml-2 text-yellow-500">Deposite</span>
+                <span class="ml-2 text-yellow-500">Withdraw</span>
+                <span class="ml-2 text-yellow-500">Trade</span>
+                <span class="ml-2 text-yellow-500">Earn</span>
+              </td>
+            </tr>
+
+            <tr class="border-b-2">
+              <td class="text-left px-[10px]">
+                <div class="flex items-center">
+                  <div class="coin-img-wrap w-[35px] h-[35px] rounded-full">
+                    <img
+                      src="./background_image.jpg"
+                      alt=""
+                      width="100%"
+                      class="rounded-full"
+                    />
+                  </div>
+
+                  <div class="coin-text ml-5">
+                    <p class="coin-short-name text-sm">ADA</p>
+                    <p class="text-xs">
+                      <a href="" class="coin-full-name">Cardano</a>
+                    </p>
+                  </div>
+                </div>
+              </td>
+
+              <td class="text-left px-[10px] py-[5px]">906,86543</td>
+              <td class="text-left px-[10px] py-[5px]">906,86543</td>
+              <td class="text-left px-[10px] py-[5px]">906,86543</td>
+              <td class="text-left px-[10px] py-[5px]">
+                <p>906,86543</p>
+                <p>= $320</p>
+              </td>
+              <td class="text-left px-[10px] py-[5px]">
+                <span class="text-yellow-500">Buy</span>
+                <span class="ml-2 text-yellow-500">Sell</span>
+                <span class="ml-2 text-yellow-500">Deposite</span>
+                <span class="ml-2 text-yellow-500">Withdraw</span>
+                <span class="ml-2 text-yellow-500">Trade</span>
+                <span class="ml-2 text-yellow-500">Earn</span>
+              </td>
+            </tr>
+
+            <tr class="border-b-2">
+              <td class="text-left px-[10px]">
+                <div class="flex items-center">
+                  <div class="coin-img-wrap w-[35px] h-[35px] rounded-full">
+                    <img
+                      src="./background_image.jpg"
+                      alt=""
+                      width="100%"
+                      class="rounded-full"
+                    />
+                  </div>
+
+                  <div class="coin-text ml-5">
+                    <p class="coin-short-name text-sm">ADA</p>
+                    <p class="text-xs">
+                      <a href="" class="coin-full-name">Cardano</a>
+                    </p>
+                  </div>
+                </div>
+              </td>
+
+              <td class="text-left px-[10px] py-[5px]">906,86543</td>
+              <td class="text-left px-[10px] py-[5px]">906,86543</td>
+              <td class="text-left px-[10px] py-[5px]">906,86543</td>
+              <td class="text-left px-[10px] py-[5px]">
+                <p>906,86543</p>
+                <p>= $320</p>
+              </td>
+              <td class="text-left px-[10px] py-[5px]">
+                <span class="text-yellow-500">Buy</span>
+                <span class="ml-2 text-yellow-500">Sell</span>
+                <span class="ml-2 text-yellow-500">Deposite</span>
+                <span class="ml-2 text-yellow-500">Withdraw</span>
+                <span class="ml-2 text-yellow-500">Trade</span>
+                <span class="ml-2 text-yellow-500">Earn</span>
+              </td>
+            </tr>
+
+            <tr class="border-b-2">
+              <td class="text-left px-[10px]">
+                <div class="flex items-center">
+                  <div class="coin-img-wrap w-[35px] h-[35px] rounded-full">
+                    <img
+                      src="./background_image.jpg"
+                      alt=""
+                      width="100%"
+                      class="rounded-full"
+                    />
+                  </div>
+
+                  <div class="coin-text ml-5">
+                    <p class="coin-short-name text-sm">ADA</p>
+                    <p class="text-xs">
+                      <a href="" class="coin-full-name">Cardano</a>
+                    </p>
+                  </div>
+                </div>
+              </td>
+
+              <td class="text-left px-[10px] py-[5px]">906,86543</td>
+              <td class="text-left px-[10px] py-[5px]">906,86543</td>
+              <td class="text-left px-[10px] py-[5px]">906,86543</td>
+              <td class="text-left px-[10px] py-[5px]">
+                <p>906,86543</p>
+                <p>= $320</p>
+              </td>
+              <td class="text-left px-[10px] py-[5px]">
+                <span class="text-yellow-500">Buy</span>
+                <span class="ml-2 text-yellow-500">Sell</span>
+                <span class="ml-2 text-yellow-500">Deposite</span>
+                <span class="ml-2 text-yellow-500">Withdraw</span>
+                <span class="ml-2 text-yellow-500">Trade</span>
+                <span class="ml-2 text-yellow-500">Earn</span>
+              </td>
+            </tr>
+
+            <tr class="border-b-2">
+              <td class="text-left px-[10px]">
+                <div class="flex items-center">
+                  <div class="coin-img-wrap w-[35px] h-[35px] rounded-full">
+                    <img
+                      src="./background_image.jpg"
+                      alt=""
+                      width="100%"
+                      class="rounded-full"
+                    />
+                  </div>
+
+                  <div class="coin-text ml-5">
+                    <p class="coin-short-name text-sm">ADA</p>
+                    <p class="text-xs">
+                      <a href="" class="coin-full-name">Cardano</a>
+                    </p>
+                  </div>
+                </div>
+              </td>
+
+              <td class="text-left px-[10px] py-[5px]">906,86543</td>
+              <td class="text-left px-[10px] py-[5px]">906,86543</td>
+              <td class="text-left px-[10px] py-[5px]">906,86543</td>
+              <td class="text-left px-[10px] py-[5px]">
+                <p>906,86543</p>
+                <p>= $320</p>
+              </td>
+              <td class="text-left px-[10px] py-[5px]">
+                <span class="text-yellow-500">Buy</span>
+                <span class="ml-2 text-yellow-500">Sell</span>
+                <span class="ml-2 text-yellow-500">Deposite</span>
+                <span class="ml-2 text-yellow-500">Withdraw</span>
+                <span class="ml-2 text-yellow-500">Trade</span>
+                <span class="ml-2 text-yellow-500">Earn</span>
+              </td>
+            </tr>
+
+            <tr class="border-b-2">
+              <td class="text-left px-[10px]">
+                <div class="flex items-center">
+                  <div class="coin-img-wrap w-[35px] h-[35px] rounded-full">
+                    <img
+                      src="./background_image.jpg"
+                      alt=""
+                      width="100%"
+                      class="rounded-full"
+                    />
+                  </div>
+
+                  <div class="coin-text ml-5">
+                    <p class="coin-short-name text-sm">ADA</p>
+                    <p class="text-xs">
+                      <a href="" class="coin-full-name">Cardano</a>
+                    </p>
+                  </div>
+                </div>
+              </td>
+
+              <td class="text-left px-[10px] py-[5px]">906,86543</td>
+              <td class="text-left px-[10px] py-[5px]">906,86543</td>
+              <td class="text-left px-[10px] py-[5px]">906,86543</td>
+              <td class="text-left px-[10px] py-[5px]">
+                <p>906,86543</p>
+                <p>= $320</p>
+              </td>
+              <td class="text-left px-[10px] py-[5px]">
+                <span class="text-yellow-500">Buy</span>
+                <span class="ml-2 text-yellow-500">Sell</span>
+                <span class="ml-2 text-yellow-500">Deposite</span>
+                <span class="ml-2 text-yellow-500">Withdraw</span>
+                <span class="ml-2 text-yellow-500">Trade</span>
+                <span class="ml-2 text-yellow-500">Earn</span>
+              </td>
+            </tr>
+
+            <tr class="border-b-2">
+              <td class="text-left px-[10px]">
+                <div class="flex items-center">
+                  <div class="coin-img-wrap w-[35px] h-[35px] rounded-full">
+                    <img
+                      src="./background_image.jpg"
+                      alt=""
+                      width="100%"
+                      class="rounded-full"
+                    />
+                  </div>
+
+                  <div class="coin-text ml-5">
+                    <p class="coin-short-name text-sm">ADA</p>
+                    <p class="text-xs">
+                      <a href="" class="coin-full-name">Cardano</a>
+                    </p>
+                  </div>
+                </div>
+              </td>
+
+              <td class="text-left px-[10px] py-[5px]">906,86543</td>
+              <td class="text-left px-[10px] py-[5px]">906,86543</td>
+              <td class="text-left px-[10px] py-[5px]">906,86543</td>
+              <td class="text-left px-[10px] py-[5px]">
+                <p>906,86543</p>
+                <p>= $320</p>
+              </td>
+              <td class="text-left px-[10px] py-[5px]">
+                <span class="text-yellow-500">Buy</span>
+                <span class="ml-2 text-yellow-500">Sell</span>
+                <span class="ml-2 text-yellow-500">Deposite</span>
+                <span class="ml-2 text-yellow-500">Withdraw</span>
+                <span class="ml-2 text-yellow-500">Trade</span>
+                <span class="ml-2 text-yellow-500">Earn</span>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
